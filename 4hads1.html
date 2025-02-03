@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escala HADS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(237, 242, 247);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: auto;
+        }
+
+        h1, h2 {
+            text-align: left;
+            color: #101810;
+            padding: 10px;
+            margin: 20px;
+            border: 2px solid green;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            background-color: #eaf5ea;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        .resultados {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+</div>
+<h1>Escala HADS</h1>
+<form id="hadsForm">
+    <!-- Perguntas de Ansiedade -->
+    <h2>Ansiedade</h2>
+    <div class="question">
+        <label>A1. Eu me sinto tenso ou 'contrariado':</label><br>
+        <input type="radio" name="ansiedade1" value="3"> A Maior parte do tempo (3)<br>
+        <input type="radio" name="ansiedade1" value="2"> Boa parte do tempo (2)<br>
+        <input type="radio" name="ansiedade1" value="1"> De vez em quando(1)<br>
+        <input type="radio" name="ansiedade1" value="0"> Nunca(0)<br>
+    </div>
+    <div class="question">
+        <label>A2. Eu sinto uma especie de medo,como se alguma coisa ruim fosse acontecer:</label><br>
+        <input type="radio" name="ansiedade2" value="3"> Sim, e de um jeito muito forte (3)<br>
+        <input type="radio" name="ansiedade2" value="2"> Sim, mas não tão forte (2)<br>
+        <input type="radio" name="ansiedade2" value="1"> Um pouco, mas isso não me preocupa (1)<br>
+        <input type="radio" name="ansiedade2" value="0"> Não sinto nada disso (0)<br>
+    </div>
+    <div class="question">
+        <label>A3. Estou com a cabeça cheia de preocupaçãoes:</label><br>
+        <input type="radio" name="ansiedade3" value="3"> A maior parte do tempo (3)<br>
+        <input type="radio" name="ansiedade3" value="2"> Boa parte do tempo (2)<br>
+        <input type="radio" name="ansiedade3" value="1"> De vez em quando (1)<br> 
+        <input type="radio" name="ansiedade3" value="0"> Raramente (0)<br>
+    </div>
+    <div class="question">
+        <label>A4. Consigo ficar sentado a vontade e me sentir relaxado:</label><br>
+        <input type="radio" name="ansiedade4" value="0"> Sim, quase sempre (0)<br>
+        <input type="radio" name="ansiedade4" value="1"> Muitas vezes (1)<br>
+        <input type="radio" name="ansiedade4" value="2"> Poucas vezes (2)<br>
+        <input type="radio" name="ansiedade4" value="3"> Nunca (3)<br>
+    </div>
+    <div class="question">
+        <label>A5. Eu tenho uma sensação ruim de medo, como um frio na barriga ou um aperto no estômago:</label><br>
+        <input type="radio" name="ansiedade5" value="0"> Nunca (0)<br>
+        <input type="radio" name="ansiedade5" value="1"> De vez em quando (1)<br>
+        <input type="radio" name="ansiedade5" value="2"> Muitas vezes (2)<br>
+        <input type="radio" name="ansiedade5" value="3"> Quase sempre (3)<br>
+    </div>
+    <div class="question">
+        <label>A6. Eu me sinto inquieto, como se eu não pudesse ficar parado em lugar nenhum:</label><br>
+        <input type="radio" name="ansiedade6" value="3"> Sim, demais (3)<br>
+        <input type="radio" name="ansiedade6" value="2"> Bastante (2)<br>
+        <input type="radio" name="ansiedade6" value="1"> Um pouco (1)<br>
+        <input type="radio" name="ansiedade6" value="0"> Não me sinto assim (0)<br>
+    </div>
+    <div class="question">
+        <label>A7. De repente, tenho a sensação de entrar em pânico:</label><br>
+        <input type="radio" name="ansiedade7" value="3"> Não me sinto assim (3)<br> 
+        <input type="radio" name="ansiedade7" value="2"> Várias vezes (2)<br>
+        <input type="radio" name="ansiedade7" value="1"> De vez em quando (1)<br>
+        <input type="radio" name="ansiedade7" value="0"> Não sinto isso (0)<br>
+<!-- Perguntas de Depressão -->
+    <h2>Depressão</h2>
+    <div class="question">
+        <label>D1. Eu ainda sinto gosto pelas mesmas coisas de antes':</label><br>
+        <input type="radio" name="depressao1" value="0"> Sim, do mesmo jeito que antes (0)<br> 
+        <input type="radio" name="depressao1" value="1"> Não tanto quanto antes (1)<br>
+        <input type="radio" name="depressao1" value="2"> Só um pouco (2)<br>
+        <input type="radio" name="depressao1" value="3"> Já não sinto mais prazer em nada (3)<br>
+    </div>
+    <div class="question">
+        <label>D2. Dou risada e me divirto quando vejo coisas engraçadas':</label><br>
+        <input type="radio" name="depressao2" value="0"> Do mesmo jeito que antes (0)<br>
+        <input type="radio" name="depressao2" value="1"> Atualmente um pouco menos (1)<br>
+        <input type="radio" name="depressao2" value="2"> Atualmente bem menos (2)<br>
+        <input type="radio" name="depressao2" value="3"> Não consigo mais (3)<br>
+    </div>
+    <div class="question">
+        <label>D3.Eu me sinto alegre':</label><br>
+        <input type="radio" name="depressao3" value="0"> A maior parte do tempo (0)<br>
+        <input type="radio" name="depressao3" value="1"> Muitas Vezes (1)<br>
+        <input type="radio" name="depressao3" value="2"> Poucas vezes (2)<br>
+        <input type="radio" name="depressao3" value="3"> Nunca (3)<br>
+    </div>
+    <div class="question">
+        <label>D4.Estou lento para pensar e fazer as coisas':</label><br>
+        <input type="radio" name="depressao4" value="3"> Quase sempre (3)<br>
+        <input type="radio" name="depressao4" value="2"> Muitas Vezes (2)<br>
+        <input type="radio" name="depressao4" value="1"> De vez em quando (1)<br>
+        <input type="radio" name="depressao4" value="0"> Nunca (0)<br>
+    </div>
+    <div class="question">
+        <label>D5.Eu perdi o interesse em cuidar da minha aparência':</label><br>
+        <input type="radio" name="depressao5" value="3"> Completamente (3)<br>
+        <input type="radio" name="depressao5" value="2"> Não estou mais cuidando como deveria (2)<br>
+        <input type="radio" name="depressao5" value="1"> Talvez não tanto quanto antes (1)<br>
+        <input type="radio" name="depressao5" value="0"> Me cuido do mesmo jeito que antes (0)<br>
+    </div>
+    <div class="question">
+        <label>D6.Fico esperando animado as coisas boas que estão por vir':</label><br>
+        <input type="radio" name="depressao6" value="0"> Do mesmo jeito que antes (0)<br>
+        <input type="radio" name="depressao6" value="1"> Um pouco menos que antes (1)<br>
+        <input type="radio" name="depressao6" value="2"> Bem menos que antes (2)<br>
+        <input type="radio" name="depressao6" value="3"> Quase nunca (3)<br>
+    </div>
+    <div class="question">
+        <label>D7.Consigo sentir prazer quando assisto a um bom programa de televisão, de radio ou quando leio alguma coisa':</label><br>
+        <input type="radio" name="depressao7" value="0"> Quase sempre (0)<br>
+        <input type="radio" name="depressao7" value="1"> Várias vezes (1)<br>
+        <input type="radio" name="depressao7" value="2"> Poucas vezes (2)<br>
+        <input type="radio" name="depressao7" value="3"> Quase nunca (3)<br>
+        <div class="resultados">
+                <h3>Resultados</h3>
+                <p>Ansiedade: <span id="resultadoAnsiedade">0</span></p>
+                <p>Depressão: <span id="resultadoDepressao">0</span></p>
+            </div>
+            <button type="button" onclick="calcularPontuacao()">Calcular</button>
+            <button type="button" onclick="salvarHADS()">Salvar e Continuar</button>
+        </form>
+    </div>
+
+    <script>
+        function calcularPontuacao() {
+            const form = document.getElementById("hadsForm");
+            let ansiedade = 0;
+            let depressao = 0;
+
+            // Soma os valores das respostas de ansiedade
+            for (let i = 1; i <= 7; i++) {
+                const respostaAnsiedade = form.querySelector(`input[name="ansiedade${i}"]:checked`);
+                if (respostaAnsiedade) {
+                    ansiedade += parseInt(respostaAnsiedade.value);
+                }
+            }
+
+            // Soma os valores das respostas de depressão
+            for (let i = 1; i <= 7; i++) {
+                const respostaDepressao = form.querySelector(`input[name="depressao${i}"]:checked`);
+                if (respostaDepressao) {
+                    depressao += parseInt(respostaDepressao.value);
+                }
+            }
+
+            // Atualiza os resultados na página
+            document.getElementById("resultadoAnsiedade").innerText = ansiedade;
+            document.getElementById("resultadoDepressao").innerText = depressao;
+        }
+
+        function salvarHADS() {
+            const form = document.getElementById("hadsForm");
+            const ansiedade = parseInt(document.getElementById("resultadoAnsiedade").innerText, 10);
+            const depressao = parseInt(document.getElementById("resultadoDepressao").innerText, 10);
+
+            const respostasSelecionadas = {};
+            form.querySelectorAll("input[type='radio']:checked").forEach(input => {
+                respostasSelecionadas[input.name] = input.value;
+            });
+
+            const hadsData = {
+                respostas: respostasSelecionadas,
+                resultados: { ansiedade, depressao }
+            };
+
+            // Salva os dados no LocalStorage
+            localStorage.setItem("hads", JSON.stringify(hadsData));
+
+            alert("HADS salvo com sucesso. Redirecionando para Zarit.");
+            window.location.href = "5zarit.html"; // Redireciona para a página do Zarit
+        }
+    </script>
+</body>
+</html>

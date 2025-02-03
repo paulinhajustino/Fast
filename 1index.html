@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #2c3e50; /* Azul escuro moderno */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container do Login */
+        .login-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            width: 320px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Campos de Entrada */
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        /* Botão de Login */
+        button {
+            width: 100%;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px;
+            margin-top: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        /* Mensagem de erro */
+        #message {
+            color: red;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Área Restrita</h2>
+        <input type="text" id="username" placeholder="Usuário">
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="login()">Entrar</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function login() {
+            // Lista de usuários permitidos
+            const usuarios = {
+                "admin": "1234",
+                "paulinha": "senha123"
+            };
+
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+            let message = document.getElementById("message");
+
+            // Verifica se o usuário e senha estão corretos
+            if (usuarios[user] && usuarios[user] === pass) {
+                sessionStorage.setItem("loggedIn", "true");
+                window.location.href = "2cadastro.html"; // Redireciona para 2cadastro.html
+            } else {
+                message.textContent = "Usuário ou senha incorretos!";
+            }
+        }
+    </script>
+
+</body>
+</html>

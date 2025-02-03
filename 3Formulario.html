@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anamnese Psicológica Hospitalar</title>
+    <style>
+        /* Estilo geral */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(237, 242, 247);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: auto;
+        }
+        h1, h2 {
+            text-align: left;
+            color: #010810;
+            padding: 10px;
+            margin: 20px;
+            border: 2px solid green;
+            border-radius: 8px;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+            background-color: #eaf5ea;
+        }
+        .question {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .question label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .question input[type="text"],
+        .question input[type="date"],
+        .question select,
+        .question textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .radio-group {
+            display: flex;
+            gap: 15px;
+        }
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Anamnese Psicológica no Contexto Hospitalar</h1>
+        <form id="anamneseForm">
+            <!-- Dados Básicos -->
+            <div class="question">
+                <label>Nome do Paciente:</label>
+                <input type="text" id="nomePaciente" required>
+            </div>
+            <div class="question">
+                <label>Idade:</label>
+                <input type="number" id="idadePaciente" min="0">
+            </div>
+            <div class="question">
+                <label>Unidade:</label>
+                <input type="text" id="unidade">
+            </div>
+            <div class="question">
+                <label>Data de Avaliação:</label>
+                <input type="date" id="dataAvaliacao">
+            </div>
+            
+            <h2>2.Aspectos Cognitivos e Emocionais</h2>
+<div class="question">
+    <label>Consciente:</label>
+    <input type="radio" name="consciente" value="Sim"> Sim
+    <input type="radio" name="consciente" value="Não"> Não
+</div>
+<div class="question">
+    <label>Orientação Autopsíquica:</label>
+    <input type="radio" name="orientacao_autopsiquica" value="Sim"> Sim
+    <input type="radio" name="orientacao_autopsiquica" value="Não"> Não
+</div>
+<div class="question">
+    <label>Orientação Alopsíquica:</label>
+    <input type="radio" name="orientacao_alopsiquica" value="Sim"> Sim
+    <input type="radio" name="orientacao_alopsiquica" value="Não"> Não
+</div>
+<div class="question">
+    <label>Presença do Acompanhante:</label>
+    <input type="radio" name="Presença de acompanhante" value="Sim"> Sim
+    <input type="radio" name="Presença de acompanhante" value="Não"> Não
+</div>
+<div class="question">
+    <label>Informações coletadas com:</label>
+    <input type="radio" name="Informações coletadas com:" value="Sim"> Paciente
+    <input type="radio" name="Informações coletadas com:" value="Não"> Acompanhante
+</div>
+<div class="question">
+    <label>Humor: Choro frequente:</label>
+    <input type="radio" name="Choro frequente com:" value="Sim"> Sim
+    <input type="radio" name="Choro frequente com:" value="Não"> Não
+</div>
+<div class="question">
+    <label>Humor: Queixa de tristeza/solidão:</label>
+    <input type="radio" name="Queixa de tristeza/solidão com:" value="Sim"> Sim
+    <input type="radio" name="Queixa de tristeza/solidãocom:" value="Não"> Não
+</div>
+<div class="question">
+    <label>Pensamento organizado:</label>
+    <input type="radio" name=" Pensamento organizado:" value="Sim"> Sim
+    <input type="radio" name=" Pensamento organizado:" value="Não"> Não
+</div>
+<div class="question">
+    <label>Psicomotricidade:</label>
+    <input type="radio" name="agitação psicomotora com:" value="Sim"> Sem Alteração
+    <input type="radio" name="agitação psicomotora:" value="Não"> Agitação psicomotora
+    <input type="radio" name="agitação psicomotora:" value="Não"> lentificação
+</div>
+<div class="question">
+    <label>Expressão do Afeto condizente:</label>
+    <input type="radio" name="Expressão do Afeto condizente com:" value="Sim"> Sim
+    <input type="radio" name="Expressão do Afeto condizente com:" value="Não"> Não
+ </div>
+<div class="question">
+    <label>Adequação do sono:</label>
+    <input type="radio" name="Adequação do sono com:" value="Sim"> Sim
+    <input type="radio" name="Adequação do sono com:"  value="Não"> Não
+ </div>
+ <div class="question">
+    <label>Uso ou abuso de álcool e outras drogas:</label>
+    <input type="radio" name="Uso ou abuso de álcool e outras drogas com:" value="Sim"> Sim
+    <input type="radio" name="Uso ou abuso de álcool e outras drogas: com:"  value="Não"> Não
+ </div>
+<div class="question">
+    <label>Se sim, qual o motivo?</label>
+    <input type="text" id="motivoPsiquiatrico">
+</div>   
+    <div class="question">
+        <label>Observação</label>
+        <input type="text" id="motivoPsiquiatrico">
+</div>    
+            <h2>3 - Relação com a Equipe de Saúde</h2>
+            <div class="question">
+                <label>Resistência ao tratamento:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="resistencia" value="Sim"> Sim</label>
+                    <label><input type="radio" name="resistencia" value="Não"> Não</label>
+                </div>
+            </div>
+
+            <h2>4 - Relação com a Família/Rede de Apoio</h2>
+            <div class="question">
+                <label>Suporte familiar adequado:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="suporteFamiliar" value="Sim"> Sim</label>
+                    <label><input type="radio" name="suporteFamiliar" value="Não"> Não</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>Rede de apoio:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="redeApoio" value="Sim"> Sim</label>
+                    <label><input type="radio" name="redeApoio" value="Não"> Não</label>
+                </div>
+            </div>
+
+            <h2>5 - Histórico de Saúde Mental</h2>
+            <div class="question">
+                <label>Acompanhamento psicológico:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="psicologico" value="Sim"> Sim</label>
+                    <label><input type="radio" name="psicologico" value="Não"> Não</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>Se sim, qual o motivo?</label>
+                <input type="text" id="motivoPsicologico">
+            </div>
+            <div class="question">
+                <label>Acompanhamento psiquiátrico:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="psiquiatrico" value="Sim"> Sim</label>
+                    <label><input type="radio" name="psiquiatrico" value="Não"> Não</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>Se sim, qual o motivo?</label>
+                <input type="text" id="motivoPsiquiatrico">
+            </div>
+            <div class="question">
+                <label>Paciente apresenta queixas?</label>
+                <textarea id="queixasPsicologicas"></textarea>
+            </div>
+            <div class="question">
+                <label>Risco Estabelecido:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="Risco Estabelecido" value="Sim"> Baixo</label>
+                    <label><input type="radio" name="Risco Estabelecido"value="Não"> Moderado</label>
+                    <label><input type="radio" name="Risco Estabelecido" value="Não"> Alto</label>
+                </div>
+
+                <button type="button" class="submit-btn" onclick="salvarAnamnese()">Salvar e Próximo</button>
+            </form>
+        </div>
+    
+        <script>
+            function salvarAnamnese() {
+                // Coleta os dados do formulário
+                const formData = {
+                    nomePaciente: document.getElementById("nomePaciente").value,
+                    idade: document.getElementById("idadePaciente").value,
+                    unidade: document.getElementById("unidade").value,
+                    dataAvaliacao: document.getElementById("dataAvaliacao").value,
+                    consciente: document.querySelector('input[name="consciente"]:checked')?.value || "",
+                    orientacaoAutopsiquica: document.querySelector('input[name="orientacao_autopsiquica"]:checked')?.value || ""
+                };
+    
+                // Salva no localStorage
+                localStorage.setItem("anamnese", JSON.stringify(formData));
+    
+                // Redireciona para o próximo formulário
+                window.location.href = "4hads1.html";
+            }
+        </script>
+    </body>
+    </html>
